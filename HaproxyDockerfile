@@ -1,0 +1,13 @@
+FROM haproxy:2.5.0-alpine
+EXPOSE 10000 9999
+
+USER root
+
+RUN apk --update add python3 py3-pip
+
+COPY /proxy/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
+COPY /proxy/vpngate.py /proxy/vpngate.py
+COPY /proxy/run.sh /proxy/run.sh
+RUN chmod +x /proxy/run.sh
+
+CMD /proxy/run.sh

@@ -1,0 +1,338 @@
+#firefox - cfmmo
+version: "3"
+
+services:
+    haproxy:
+        build:
+            context: .
+            dockerfile: HaproxyDockerfile
+        image: haproxyimg
+        ports:
+            - 10000:10000
+            - 9999:9999
+        volumes:
+           - ./ovpn:/ovpn
+        links:
+            - ovpn_proxy_00:vpn00
+            - ovpn_proxy_01:vpn01
+            - ovpn_proxy_02:vpn02
+            - ovpn_proxy_03:vpn03
+            - ovpn_proxy_04:vpn04
+            - ovpn_proxy_05:vpn05
+            - ovpn_proxy_06:vpn06
+            - ovpn_proxy_07:vpn07
+            - ovpn_proxy_08:vpn08
+            - ovpn_proxy_09:vpn09
+            - ovpn_proxy_10:vpn10
+            - ovpn_proxy_11:vpn11
+            - ovpn_proxy_12:vpn12
+            - ovpn_proxy_13:vpn13
+            - ovpn_proxy_14:vpn14
+            - ovpn_proxy_15:vpn15
+            - ovpn_proxy_16:vpn16
+            - ovpn_proxy_17:vpn17
+            - ovpn_proxy_18:vpn18
+            - ovpn_proxy_19:vpn19
+        restart: always
+
+    ovpn_proxy_00:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_01:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_02:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_03:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_04:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_05:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_06:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_07:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_08:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_09:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+
+
+    ovpn_proxy_10:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_11:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_12:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_13:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_14:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_15:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_16:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_17:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_18:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
+
+    ovpn_proxy_19:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: testimg
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+        volumes:
+            - ./ovpn:/ovpn
+        restart: always
